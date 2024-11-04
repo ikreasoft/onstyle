@@ -1,0 +1,73 @@
+---
+import { HeroSlider1, HeroSlider2, HeroSlider3, HeroSlider4, HeroSlider5 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+---
+
+<Layout
+    title="On-Style | Homepage"
+    description="On-Style, descubre las últimas tendencias en moda y encuentra las prendas perfectas para expresar tu estilo único. Nuestra tienda online ofrece una amplia selección de ropa, calzado y accesorios para mujer y hombre"
+>
+    <main class="page-content">
+        <Hero
+            client:load
+            heroType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "New Catalog 🏷️🆕",
+                    title: "On-Style",
+                    background: HeroSlider1.src,
+                    paragraph:
+                        "Nuevo catálogo otoño 2024 | Descubre las últimas tendencias de moda para otoño 2024. ¡Nuestro nuevo catálogo te espera!",
+                    button: {
+                        text: "Ver catálogo",
+                        link: "#",
+                    },
+                },
+                {
+                    subtitle: "Un otoño lleno de sensaciones On-Style",
+                    title: "Fall Winter 24",
+                    background: HeroSlider2.src,
+                    paragraph: "",
+                    button: {
+                        text: "See FW24 NOW! 💅",
+                        link: "#",
+                    },
+                },
+                {
+                    subtitle: "On-Sytile Collection",
+                    title: "AW24 parka 🧥",
+                    background: HeroSlider3.src,
+                    paragraph:
+                        "Nuestra nueva winter jacket FW24 combina estilo y funcionalidad. #moda🧤 #invierno ☃️❄️",
+                    button: {
+                        text: "Ver catálogo ",
+                        link: "#",
+                    },
+                },
+                {
+                    subtitle: "On-Sytile innovation zone 🤩",
+                    title: "News",
+                    background: HeroSlider4.src,
+                    paragraph:
+                        " Hemos desarrollado soluciones innovadoras para ti",
+                    button: {
+                        text: "Ver novedades",
+                        link: "#",
+                    },
+                },
+                {
+                    subtitle: "On-Sytile Urban",
+                    title: "Urban",
+                    background: HeroSlider5.src,
+                    paragraph:
+                        "Descubre las últimas tendencias de moda en el corazón de la ciudad. 😲 #modaurbana #ropa #tendencias",
+                    button: {
+                        text: "Explorar ahora! 👉",
+                        link: "#",
+                    },
+                }
+            ]}
+        />
+    </main>
+</Layout>
